@@ -1,0 +1,15 @@
+<h3>Listado de Heroes</h3>
+
+<p *ngFor="let hero of listaod_heroes; let i = index" > {{i}} {{hero}}</p>
+
+<h3 *ngIf="heroes_borrados; else titulo" >Heroe Borrado</h3>
+
+<ng-template #titulo >
+  <h3 >no hay heroes elimnados</h3>
+</ng-template>
+
+<p> {{heroes_borrados}} </p>
+
+
+<button (click)="delete_lista()" [disabled]="active"  >Eliminar </button>
+<button (click)="active_btn()" [class]="(active)? 'active':'desactive'"> {{(active)? "Activar el boton": "Desactivar el boton"}} </button>
