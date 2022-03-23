@@ -15,7 +15,20 @@ export class ListadoComponent implements OnInit {
   listaod_heroes = ["superman","batman","spiderman","deadpool","Dr,Stronge"]
   active = true
 
+  nombre = "Alix"
+
   heroes_borrados = ""
+
+  productos = [
+    {
+      producto:"balon",
+      precio: 50_000
+    },
+    {
+      producto:"celular",
+      precio:750_000
+    }
+  ]
 
   active_btn (){
     this.active = !this.active

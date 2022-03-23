@@ -7,7 +7,7 @@ import { Component } from "@angular/core"
 
     <span class="span">{{contador}}</span>
     <button class="btn_counter" (click)="incrementar()">+1</button>
-    <button class="btn_counter" (click)="desincrementar()">-1</button>
+    <button class="btn_counter" (click)="desincrementar($event)">-1</button>
 
   `,
   styleUrls:["../app.component.scss"]
@@ -22,7 +22,9 @@ export class Counter {
     this.contador += this.base
   }
 
-  desincrementar () {
+  desincrementar (event : Event) {
     this.contador -= this.base
+    const btn = event.target as HTMLButtonElement
+    console.log(btn.classList[0] )
   }
 }

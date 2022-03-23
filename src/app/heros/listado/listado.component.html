@@ -13,3 +13,25 @@
 
 <button (click)="delete_lista()" [disabled]="active"  >Eliminar </button>
 <button (click)="active_btn()" [class]="(active)? 'active':'desactive'"> {{(active)? "Activar el boton": "Desactivar el boton"}} </button>
+
+<h3>Productos (array de objetos con for) </h3>
+
+<div  class="producto_grid" >
+    <dl *ngFor="let producto of productos">
+      <td>Nombre</td>
+      <dd> {{producto.producto}} </dd>
+      <td>Precio</td>
+      <dd> {{producto.precio}} </dd>
+    </dl>
+</div>
+
+<h3>Switch</h3>
+
+<div [ngSwitch]="nombre" >
+
+  <p *ngSwitchCase="'camilo'" >camilo</p>
+  <p *ngSwitchCase="'jeyson'" >jeyson</p>
+  <p *ngSwitchCase="'Alix'" >Alix</p>
+  <p *ngSwitchDefault >default</p>
+
+</div>
